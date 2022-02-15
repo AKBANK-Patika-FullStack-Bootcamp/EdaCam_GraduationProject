@@ -1,3 +1,41 @@
+## FrontEnd
+- Projenin front-end kısmı authentication, components, pages, store ve layout kısımlarından oluşmaktadır.
+#### Authentication : 
+Kullanıcı mail ve parola bilgileri ile giriş yaptığında kullanıcının rolünü içeren bir token üretilmektedir. Üretilen token jwt-decode kütüphanesinden yararlanılarak çözümlenerek token içerisindeki bilgiler localStorage’a kaydedilmiştir. Bu bilgiler sadece kullanıcı rolü,idsi ve tokendan oluşmaktadır.
+Kullanıcıyı giriş esnasında üretilen tokendan elde edilen bilgiler ışığında kullanıcının yetkisine bağlı olarak (User/Admin) farklı arayüzler karşılamaktadır. Bu arayüzler Layout kısmında ele alınmıştır.
+#### Layout:
+Layout ile ilgili kodlar hoc klasörü altında yer almaktadır. Layout tasarımının oluşturulmasında antd kütüphanesi kullanılmıştır. 
+Kullanıcıyı sahip olduğu role bağlı olarak 2 farklı menü karşılayacaktır. 
+Admin’e ait olan menüde Kullanıcı İşlemleri,Daire İşlemleri,  Fatura İşlemleri, Ödeme İşlemleri ve çıkış bulunur.
+Kullanıcı’ya ait olan menüde Kullanıcı Bilgileri,Faturalarım, Ödemelerim ve çıkış bulunur.
+#### Pages:
+Layout’da yer alan siderdaki butonlara tıklandığında değişecek ve ekranda görüntülenecek olan içerikler pages klasörü altında ele alınmıştır. Önceki kısımda ele alınan menu işlemlerinin her biri için(çıkış hariç) kullanıcıya gösterilecek olan ekranlar bu kısımdadır. 
+Bunlar ApartmentPage, DebtPage, PaymentPage, UserDebtPage, UserInfoPage, UserPage ve UserPaymentPage şeklindedir.
+#### Store:
+Store klasörü altında backend ile iletişimin sağlanması ele alınmıştır. Bu katmanda backend’e gönderilecek istekler için endpointler belirtilerek backend istekleri atan metotlar halinde export edilmiştir. 
+Backend’e atılan istekler için promise tabanlı HTTP İstemcisi olan axios kütüphanesi kullanılmıştır. Tüm servisler için bir instance oluşturulmuş(api.js’de) ve bu instance ile tüm istekler için ortak özellikler tanımlanmıştır.
+
+
+#### Components:
+Component katmanında uygulamada ihtiyaç duyulan tekrar kullanılabilir parçalara ayırılmış sınıflar bulunmaktadır. Birbirine benzer olan ve birbiri içerisinde kullanılan komponentler bir klasör altında toplanmıştır. 
+Örneğin Daire işlemleri için oluşturulan komponentler apartments klasörü altında yer almaktadır ve içerisinde Apartment, ApartmentForm, apartmentHelper ve ApartmentTable componentleri yer almaktadır.
+
+<br> **Apartment componenti** ApartmentPage içerisinde çağırılmaktadır ve ApartmentTable componentini döner. İçerisindeki apartmentServices sınıfından aldığı axios metotlarını Apartment table’a props olarak gönderir.
+
+<br> **ApartmentTable** daire verilerinin çekilmesi ve diğer crud operasyonlarının yönetilmesi ile ilgilenir. Tablo yapısının sağlanması için MaterialTable kütüphanesi kullanılmaktadır.
+
+<br> **ApartmetnForm** componenti ise ekleme-güncelleme işlemleri için kullanılan form yapısını sağlar. Form işlemleri için antd ve formik kütüphaneleri kullanılmıştır.
+apartmentHelper’da ise form içerisinde kullanılan default valuelar ve güncelleme işlemi sırasında formun ilgili satırdaki verilerle dolu gelmesini sağlayan getInitialValues metodu yer almaktadır.
+
+<br> **Login** katmanında kullanıcıyı karşılayan giriş ekranı formu bulunmaktadır. Kullanıcı mail ve parola bilgileri burada girilir ve doğrulanarak token oluşturulur.
+
+<br> **Helpers** katmanında ise componentlerde ortak olarak kullanılan yardımcı araçlar yer almaktadır. Bunlar formun bir pop-up olarak açılmasını sağlayan OpenDialog ve slime işlemi gibi işlemlerde kullanıcı onayı almak isteyen Evet/Hayır seçeneklerinden oluşan ConfirmModalButton’dur.
+
+
+
+
+---------
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
