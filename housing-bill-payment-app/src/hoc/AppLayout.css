@@ -1,0 +1,64 @@
+.sider {
+    height: 100vh !important;
+    background-color: #535363;
+}
+
+.sider-button {
+    padding: 0 24px;
+    font-size: 18px;
+    line-height: 64px;
+    cursor: pointer;
+    transition: color 0.3s;
+    color: #fff;
+}
+
+.sider-collapsed {
+    display: block;
+}
+
+.sider-not-collapsed {
+    float: right;
+}
+
+.sider-header {
+    text-align: center;
+}
+
+.sider-header > h2 {
+    color: #fff;
+}
+  
+.logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.logo-big {
+    width: 80px;
+}
+
+.logo-small {
+    width:35px;
+}
+
+.menu {
+    margin: 1rem 0;
+}
+
+.ant-menu-item-selected {
+    background-color: #74747d !important;
+  }
+
+.ant-menu-dark {
+    background-color: #535363 !important;
+}
+
+.ant-menu-item {
+    color: #fff !important;
+}
+
+.ant-divider-horizontal {
+    margin: 0 !important;
+    background-color: #74747d !important;
+}
