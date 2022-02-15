@@ -72,6 +72,7 @@ Veri Tabanı Mimarisi
 ![KullanıcıÖdemelerim](https://user-images.githubusercontent.com/54909611/153984212-81f7eb49-4e29-4285-b27b-ce353fdc39c0.JPG)
 
 Admin Demo :https://watch.screencastify.com/v/3gxrUjLJcfjI8DY6A4Jl
+User Demo : https://watch.screencastify.com/v/Do6AKBT3BRW516ei5cUK
 
 
 
