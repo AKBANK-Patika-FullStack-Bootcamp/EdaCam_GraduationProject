@@ -39,3 +39,37 @@ Veri Tabanı Mimarisi
 - User tablosundaki TCKN, E-Mail, Phone, Car Plate değerleri kullanıcıya özel değerler olduğu için bu değerler Unique key olarak tanımlanmıştır.
 - Apartment tablosunda Block ve ApartmentNo aynı blokta yanlızca bir daire numarası bulunabileceğinden iki değer birlikte UK_Block_ApartmentNo şeklinde tanımlanmıştır.
 
+---------------
+## Kullanıcı Arayüzleri
+### Giriş Ekranı
+![giris](https://user-images.githubusercontent.com/54909611/153983741-e65a6bf9-f8be-4e8c-ae95-53ff01b55707.JPG)
+
+### ADMIN- Kullanıcılar
+![kullanıcılar](https://user-images.githubusercontent.com/54909611/153983817-6d161f9a-d5ee-43f9-a0df-0b1b197f9989.JPG)
+
+### ADMIN - Kullanıcı Güncelleme
+![kullanıcıgüncelle](https://user-images.githubusercontent.com/54909611/153983852-4a73365c-8576-474d-9b24-9a7efe9be92c.JPG)
+
+### ADMIN - Daire Güncelleme
+![dairegüncelle](https://user-images.githubusercontent.com/54909611/153983939-93486f43-e68d-43c6-b41d-69cc76ecfb30.JPG)
+
+### ADMIN - Fatura İşlemleri
+![faturaislem](https://user-images.githubusercontent.com/54909611/153984023-f09d39ca-caf1-4576-a6d7-34c9d6b13da1.JPG)
+
+### ADMIN - Ödemeler
+![Ödemeler](https://user-images.githubusercontent.com/54909611/153984056-17259418-370c-4220-8c4d-ffcdda9d59d7.JPG)
+
+### USER - Kullanıcı Bilgileri
+![UserKullanıcıBilgileri](https://user-images.githubusercontent.com/54909611/153984097-8b288100-a333-413d-9e92-c0a7065043e8.JPG)
+
+### USER - Faturalarım
+![KullanıcıFaturalarım](https://user-images.githubusercontent.com/54909611/153984148-3e5e864e-6c02-4fdb-be0b-32a5de4fb749.JPG)
+
+### USER - Fatura Ödeme
+![Ödeme](https://user-images.githubusercontent.com/54909611/153984253-8735a067-3c01-4fae-ae8c-235e9393787d.JPG)
+
+### USER - Ödemelerim
+![KullanıcıÖdemelerim](https://user-images.githubusercontent.com/54909611/153984212-81f7eb49-4e29-4285-b27b-ce353fdc39c0.JPG)
+
+
+
